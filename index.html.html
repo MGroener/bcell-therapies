@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B Cell Targeting Therapies — Comprehensive Overview</title>
+<style>
+:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#232734;--border:#2e3348;--text:#e2e4ed;--text-dim:#9298b0;--accent:#6c8aff;--green:#4ade80;--amber:#fbbf24;--rose:#fb7185;--cyan:#22d3ee;--purple:#c084fc;--orange:#fb923c;--teal:#2dd4bf}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0}
+.hero{background:linear-gradient(135deg,#1a1040 0%,#0f1117 50%,#0a1628 100%);border-bottom:1px solid var(--border);padding:3rem 2rem 2.5rem;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:700;letter-spacing:-0.03em;background:linear-gradient(135deg,#6c8aff,#c084fc,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem}
+.hero .subtitle{color:var(--text-dim);font-size:.95rem;max-width:600px;margin:0 auto}
+.container{max-width:1400px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.nav-pills{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1.5rem 0 2rem;position:sticky;top:0;z-index:100;background:var(--bg);padding:1rem 0;border-bottom:1px solid var(--border)}
+.nav-pills a{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem 1rem;border-radius:999px;font-size:.8rem;font-weight:500;text-decoration:none;color:var(--text-dim);background:var(--surface);border:1px solid var(--border);transition:all .2s;white-space:nowrap}
+.nav-pills a:hover{color:var(--text);border-color:var(--accent);background:var(--surface2)}
+.nav-pills .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.section{margin-bottom:3rem;scroll-margin-top:80px}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:.4rem}
+.section-header .icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.section-header h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.02em}
+.section-desc{color:var(--text-dim);font-size:.88rem;margin-bottom:1.25rem;max-width:900px}
+.subsection{margin-bottom:1rem;margin-top:1.5rem}
+.subsection h3{font-size:1rem;font-weight:600;display:flex;align-items:center;gap:.5rem}
+.target-badge{font-size:.7rem;padding:.15rem .55rem;border-radius:999px;font-weight:600;letter-spacing:.03em}
+.table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);background:var(--surface);margin-bottom:1rem}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:var(--surface2);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-dim);padding:.75rem 1rem;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+tbody td{padding:.7rem 1rem;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(108,138,255,0.04)}
+.agent-name{font-weight:600;color:var(--text);white-space:nowrap}
+.tag{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.7rem;font-weight:500;white-space:nowrap;margin:.1rem .15rem .1rem 0}
+.tag-approved{background:rgba(74,222,128,0.15);color:var(--green)}
+.tag-phase3{background:rgba(34,211,238,0.15);color:var(--cyan)}
+.tag-phase2{background:rgba(251,191,36,0.15);color:var(--amber)}
+.tag-phase1{background:rgba(192,132,252,0.15);color:var(--purple)}
+.tag-preclinical{background:rgba(148,163,184,0.15);color:#94a3b8}
+.tag-discontinued{background:rgba(251,113,133,0.12);color:var(--rose)}
+.tag-offlabel{background:rgba(249,146,60,0.15);color:var(--orange)}
+.disease-list{font-size:.82rem;color:var(--text-dim);line-height:1.5}
+.disease-list a{color:var(--text-dim);text-decoration:underline;text-decoration-style:dotted;text-underline-offset:2px;text-decoration-color:rgba(146,152,176,0.4);transition:all .2s}
+.disease-list a:hover{color:var(--accent);text-decoration-color:var(--accent);text-decoration-style:solid}
+.feature-text{font-size:.82rem;color:var(--text);line-height:1.5}
+.lineage-table td,.lineage-table th{text-align:center;padding:.6rem .7rem}
+.lineage-table td:first-child,.lineage-table th:first-child{text-align:left;font-weight:600;white-space:nowrap}
+.expr-high{color:var(--green);font-weight:700;font-size:1rem}
+.expr-mod{color:var(--amber);font-weight:600;font-size:.95rem}
+.expr-low{color:var(--text-dim);font-size:.9rem}
+.expr-min{color:#555b73;font-size:.85rem}
+.expr-none{color:#333849;font-size:.8rem}
+.legend{display:flex;flex-wrap:wrap;gap:1.25rem;margin:1rem 0 .5rem;font-size:.78rem;color:var(--text-dim)}
+.legend-item{display:flex;align-items:center;gap:.35rem}
+.section-divider{background:var(--surface2);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim);padding:.5rem 1rem}
+.tag a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor;transition:all .2s}
+.tag a:hover{opacity:0.8;border-bottom-style:solid}
+.footer{text-align:center;padding:2rem 1rem;color:var(--text-dim);font-size:.78rem;border-top:1px solid var(--border);margin-top:2rem}
+@media(max-width:768px){.hero h1{font-size:1.5rem}.container{padding:1rem .75rem 2rem}table{font-size:.78rem}thead th,tbody td{padding:.5rem .6rem}}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>B Cell Targeting Therapies</h1>
+<p class="subtitle">Comprehensive overview of therapies targeting B cells along their lineage — from pro-B cells to long-lived plasma cells. Created by Marwin Groener, MD with the help of Claude Opus 4.6 by Anthropic. Compiled March 2026.</p>
+</div>
+<nav class="nav-pills">
+<a href="#mab-cd20"><span class="dot" style="background:var(--accent)"></span>Anti-CD20</a>
+<a href="#mab-cd19"><span class="dot" style="background:var(--cyan)"></span>Anti-CD19</a>
+<a href="#mab-cd38"><span class="dot" style="background:var(--purple)"></span>Anti-CD38</a>
+<a href="#mab-baff"><span class="dot" style="background:var(--green)"></span>BAFF/APRIL</a>
+<a href="#bispecific"><span class="dot" style="background:var(--orange)"></span>Bispecifics / TCEs</a>
+<a href="#cart"><span class="dot" style="background:var(--rose)"></span>CAR-T Cells</a>
+<a href="#other"><span class="dot" style="background:var(--teal)"></span>Other</a>
+<a href="#lineage"><span class="dot" style="background:var(--amber)"></span>Lineage Map</a>
+</nav>
+<div class="container">
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- ANTI-CD20 -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="mab-cd20">
+<div class="section-header"><div class="icon" style="background:rgba(108,138,255,0.15);color:var(--accent);">💊</div><h2>Monoclonal Antibodies — Anti-CD20</h2></div>
+<p class="section-desc">Target mature B cells (pre-B through memory). CD20 is absent on pro-B cells, plasmablasts, and most plasma cells — a key limitation for diseases driven by antibody-secreting cells.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type / Format</th><th>Unique Features</th><th>Diseases / Applications</th><th>Status</th></tr></thead><tbody>
+
+<!-- Rituximab -->
+<tr>
+<td class="agent-name">Rituximab</td>
+<td>CD20</td>
+<td>Chimeric IgG1, Type I</td>
+<td class="feature-text">First-in-class (1997). CDC &gt; ADCC. Chimeric structure → immunogenicity risk (anti-drug antibodies). IV.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/16947627/" target="_blank" rel="noopener">RA</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20647199/" target="_blank" rel="noopener">GPA/MPA</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/28342637/" target="_blank" rel="noopener">PV</a> (approved). Off-label: <a href="https://pubmed.ncbi.nlm.nih.gov/20039413/" target="_blank" rel="noopener">SLE</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/34268519/" target="_blank" rel="noopener">SSc</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/24500166/" target="_blank" rel="noopener">IIM</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/24727841/" target="_blank" rel="noopener">Sjögren's</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20647199/" target="_blank" rel="noopener">ANCA vasculitis</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/32199095/" target="_blank" rel="noopener">NMOSD</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/16947627/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Ocrelizumab -->
+<tr>
+<td class="agent-name">Ocrelizumab</td>
+<td>CD20</td>
+<td>Humanized IgG1, Type I</td>
+<td class="feature-text">Greater ADCC, less CDC than rituximab → fewer infusion reactions. IV.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/28002679/" target="_blank" rel="noopener">Relapsing MS</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/28002688/" target="_blank" rel="noopener">primary progressive MS</a> (approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/28002679/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Ofatumumab -->
+<tr>
+<td class="agent-name">Ofatumumab</td>
+<td>CD20</td>
+<td>Fully human IgG1, Type I</td>
+<td class="feature-text">Binds distinct CD20 epitope (small extracellular loop). Potent CDC. SC self-injection.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/32757523/" target="_blank" rel="noopener">Relapsing MS</a> (approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/32757523/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Ublituximab -->
+<tr>
+<td class="agent-name">Ublituximab</td>
+<td>CD20</td>
+<td>Chimeric IgG1, Type I</td>
+<td class="feature-text">Glycoengineered (low fucose Fc) → enhanced ADCC. IV.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/36001711/" target="_blank" rel="noopener">Relapsing MS</a> (approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/36001711/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Obinutuzumab -->
+<tr>
+<td class="agent-name">Obinutuzumab</td>
+<td>CD20</td>
+<td>Humanized IgG1, <strong>Type II</strong></td>
+<td class="feature-text">Glycoengineered; enhanced ADCC + direct cell death induction. Type II: does not relocate CD20 to lipid rafts → less CDC but superior direct killing. Superior B cell cytotoxicity vs rituximab in RA/SLE samples in vitro.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/24401022/" target="_blank" rel="noopener">CLL</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/28614711/" target="_blank" rel="noopener">FL</a> (approved). Investigated: <a href="https://pubmed.ncbi.nlm.nih.gov/34615636/" target="_blank" rel="noopener">SLE</a>, <a href="https://clinicaltrials.gov/study/NCT02586051" target="_blank" rel="noopener">transplant desensitization</a>, <a href="https://clinicaltrials.gov/study/NCT05627557" target="_blank" rel="noopener">nephrotic syndrome</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/24401022/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/34615636/" target="_blank" rel="noopener">Phase 2 (AI)</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- ANTI-CD19 -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="mab-cd19">
+<div class="section-header"><div class="icon" style="background:rgba(34,211,238,0.15);color:var(--cyan);">💊</div><h2>Monoclonal Antibodies — Anti-CD19</h2></div>
+<p class="section-desc">CD19 is expressed more broadly than CD20 — from pre-B cells through plasmablasts and some plasma cells. This allows depletion of antibody-secreting cells missed by anti-CD20 therapy.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type / Format</th><th>Unique Features</th><th>Diseases / Applications</th><th>Status</th></tr></thead><tbody>
+
+<!-- Inebilizumab -->
+<tr>
+<td class="agent-name">Inebilizumab</td>
+<td>CD19</td>
+<td>Humanized, afucosylated IgG1</td>
+<td class="feature-text">Afucosylation → enhanced ADCC. Depletes plasmablasts and some plasma cells beyond CD20 coverage. IV q6 months.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/31495497/" target="_blank" rel="noopener">AQP4+ NMOSD</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39541094/" target="_blank" rel="noopener">IgG4-RD</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/40202593/" target="_blank" rel="noopener">gMG</a> (AChR+ &amp; MuSK+) — all FDA-approved. Investigated: <a href="https://pubmed.ncbi.nlm.nih.gov/29956883/" target="_blank" rel="noopener">SSc</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/29143550/" target="_blank" rel="noopener">MS</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/31495497/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Obexelimab -->
+<tr>
+<td class="agent-name">Obexelimab</td>
+<td>CD19 + FcγRIIb</td>
+<td>Bifunctional IgG1</td>
+<td class="feature-text">Novel mechanism: co-ligates CD19 with the inhibitory Fc receptor FcγRIIb → functional B cell silencing rather than depletion. Preserves B cells but suppresses activation.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38251576/" target="_blank" rel="noopener">IgG4-RD</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/37459248/" target="_blank" rel="noopener">SLE</a></td>
+<td><span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/38251576/" target="_blank" rel="noopener">Phase 2/3</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- ANTI-CD38 -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="mab-cd38">
+<div class="section-header"><div class="icon" style="background:rgba(192,132,252,0.15);color:var(--purple);">💊</div><h2>Monoclonal Antibodies — Anti-CD38</h2></div>
+<p class="section-desc">CD38 is highly expressed on plasma cells and plasmablasts — the antibody-secreting compartment resistant to anti-CD20 therapy. Also expressed on NK cells and activated T cells, contributing to broader immunomodulatory effects and infection risk.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type / Format</th><th>Unique Features</th><th>Diseases / Applications</th><th>Status</th></tr></thead><tbody>
+
+<!-- Daratumumab -->
+<tr>
+<td class="agent-name">Daratumumab</td>
+<td>CD38</td>
+<td>Fully human IgG1κ</td>
+<td class="feature-text">First-in-class anti-CD38. Multiple killing mechanisms: CDC, ADCC, ADCP, direct apoptosis. Also depletes CD38+ Tregs and NK cells. Most potent CDC inducer among CD38 mAbs. IV or SC.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/27705267/" target="_blank" rel="noopener">MM</a> (approved). Off-label in 24+ autoimmune diseases: <a href="https://pubmed.ncbi.nlm.nih.gov/38101819/" target="_blank" rel="noopener">refractory SLE</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/35190038/" target="_blank" rel="noopener">membranous nephropathy</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/36627149/" target="_blank" rel="noopener">ANCA vasculitis</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38101819/" target="_blank" rel="noopener">AIHA, ITP</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/40490910/" target="_blank" rel="noopener">transplant AMR</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/40703261/" target="_blank" rel="noopener">ME/CFS</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/27705267/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-offlabel"><a href="https://pubmed.ncbi.nlm.nih.gov/38101819/" target="_blank" rel="noopener">Off-label (AI)</a></span></td>
+</tr>
+
+<!-- Isatuximab -->
+<tr>
+<td class="agent-name">Isatuximab</td>
+<td>CD38</td>
+<td>Chimeric IgG1κ</td>
+<td class="feature-text">Stronger direct pro-apoptotic activity (caspase/lysosomal pathways) than daratumumab. Less CDC. Can deplete CD38+ memory B cells, plasmablasts, and plasma cells.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/31735560/" target="_blank" rel="noopener">MM</a> (approved). <a href="https://pubmed.ncbi.nlm.nih.gov/38147137/" target="_blank" rel="noopener">Transplant desensitization</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/31735560/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/38147137/" target="_blank" rel="noopener">Phase 2 (tx)</a></span></td>
+</tr>
+
+<!-- Felzartamab -->
+<tr>
+<td class="agent-name">Felzartamab</td>
+<td>CD38</td>
+<td>Fully human IgG1</td>
+<td class="feature-text">Developed specifically for autoimmune/transplant indications. Primarily ADCC/ADCP; minimal CDC. Depletes PCs and NK cells. FDA Breakthrough Therapy + Orphan Drug Designations.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38804514/" target="_blank" rel="noopener">Late AMR (kidney transplant)</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39291206/" target="_blank" rel="noopener">primary MN</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/40581166/" target="_blank" rel="noopener">IgAN</a></td>
+<td><span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/38804514/" target="_blank" rel="noopener">Phase 2</a></span></td>
+</tr>
+
+<!-- CM313 -->
+<tr>
+<td class="agent-name">CM313</td>
+<td>CD38</td>
+<td>Humanized IgG mAb</td>
+<td class="feature-text">Novel anti-CD38 with unique CDR sequence. Induces CDC, ADCC, ADCP. NEJM 2024: 95% platelet response in ITP, rapid onset (median 1 week). Dual mechanism: ADCC inhibition on platelets + long-lived PC clearance. Phase Ib/IIa RCT in SLE (2025).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38899695/" target="_blank" rel="noopener">ITP</a> (NEJM 2024), <a href="https://pubmed.ncbi.nlm.nih.gov/41290616/" target="_blank" rel="noopener">SLE</a> (Phase Ib/IIa)</td>
+<td><span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/38899695/" target="_blank" rel="noopener">Phase 1/2</a></span></td>
+</tr>
+
+<!-- Mezagitamab -->
+<tr>
+<td class="agent-name">Mezagitamab (TAK-079)</td>
+<td>CD38</td>
+<td>Fully human IgG1 mAb</td>
+<td class="feature-text">Subcutaneous administration — unique among anti-CD38s. Developed specifically for autoimmune indications (MM development discontinued). Placebo-controlled Phase 2b in ITP showed dose-dependent responses. Phase 3 ITP trial initiated Feb 2025. Orphan Drug + Fast Track designations.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38453421/" target="_blank" rel="noopener">SLE</a> (Phase 1b), <a href="https://clinicaltrials.gov/study/NCT04278924" target="_blank" rel="noopener">ITP</a> (Phase 2b → Phase 3), <a href="https://clinicaltrials.gov/study/NCT05174221" target="_blank" rel="noopener">IgAN</a></td>
+<td><span class="tag tag-phase3"><a href="https://clinicaltrials.gov/study/NCT06722235" target="_blank" rel="noopener">Phase 3 (ITP)</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- BAFF/APRIL -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="mab-baff">
+<div class="section-header"><div class="icon" style="background:rgba(74,222,128,0.15);color:var(--green);">💊</div><h2>BAFF / APRIL Pathway Targeting</h2></div>
+<p class="section-desc">BAFF and APRIL are TNF superfamily cytokines that promote B cell survival, differentiation, and antibody production. BAFF binds BAFF-R, TACI, BCMA; APRIL binds TACI and BCMA. Targeting these pathways modulates B cell homeostasis and plasma cell survival.</p>
+
+<!-- Anti-BAFF sub -->
+<div class="subsection"><h3>Anti-BAFF <span class="target-badge" style="background:rgba(74,222,128,0.15);color:var(--green);">BAFF / BLyS</span></h3></div>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type</th><th>Unique Features</th><th>Diseases</th><th>Status</th></tr></thead><tbody>
+
+<!-- Belimumab -->
+<tr>
+<td class="agent-name">Belimumab</td>
+<td>Soluble BAFF</td>
+<td>Fully human IgG1λ mAb</td>
+<td class="feature-text">First biologic approved for SLE (2011). Reduces naïve and transitional B cells. Does NOT block APRIL. Does not directly deplete memory B cells or plasma cells.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/21296403/" target="_blank" rel="noopener">SLE</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/32937045/" target="_blank" rel="noopener">lupus nephritis</a> (approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/21296403/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Ianalumab -->
+<tr>
+<td class="agent-name">Ianalumab (VAY736)</td>
+<td>BAFF-R</td>
+<td>Afucosylated human IgG1 mAb</td>
+<td class="feature-text">Dual mechanism: blocks BAFF signaling at BAFF-R AND depletes BAFF-R+ B cells via enhanced ADCC. NEJM 2025 publication in Sjögren's.</td>
+<td class="disease-list">Primary <a href="https://pubmed.ncbi.nlm.nih.gov/34861168/" target="_blank" rel="noopener">Sjögren's</a> (Phase 2b+), <a href="https://clinicaltrials.gov/study/NCT05126277" target="_blank" rel="noopener">SLE/LN</a> (Phase 3 SIRIUS-LN)</td>
+<td><span class="tag tag-phase3"><a href="https://pubmed.ncbi.nlm.nih.gov/34861168/" target="_blank" rel="noopener">Phase 2b/3</a></span></td>
+</tr>
+
+<!-- Tabalumab -->
+<tr>
+<td class="agent-name">Tabalumab</td>
+<td>Soluble + membrane BAFF</td>
+<td>Human IgG4 mAb</td>
+<td class="feature-text">Targets both soluble and membrane-bound BAFF (unlike belimumab). Failed primary endpoint in ILLUMINATE-1.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/26338095/" target="_blank" rel="noopener">SLE</a> (failed Phase 3)</td>
+<td><span class="tag tag-discontinued"><a href="https://pubmed.ncbi.nlm.nih.gov/26338095/" target="_blank" rel="noopener">Discontinued</a></span></td>
+</tr>
+
+<!-- Blisibimod -->
+<tr>
+<td class="agent-name">Blisibimod</td>
+<td>Soluble + membrane BAFF</td>
+<td>Peptibody (peptide-Fc)</td>
+<td class="feature-text">Four BAFF-binding domains. Failed Phase 3 (CHABLIS-SC1).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/29563108/" target="_blank" rel="noopener">SLE</a> (failed Phase 3)</td>
+<td><span class="tag tag-discontinued"><a href="https://pubmed.ncbi.nlm.nih.gov/29563108/" target="_blank" rel="noopener">Discontinued</a></span></td>
+</tr>
+
+</tbody></table></div>
+
+<!-- Anti-APRIL sub -->
+<div class="subsection"><h3>Anti-APRIL <span class="target-badge" style="background:rgba(251,191,36,0.15);color:var(--amber);">APRIL</span></h3></div>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type</th><th>Unique Features</th><th>Diseases</th><th>Status</th></tr></thead><tbody>
+
+<!-- Sibeprenlimab -->
+<tr>
+<td class="agent-name">Sibeprenlimab</td>
+<td>APRIL</td>
+<td>Humanized IgG2 mAb</td>
+<td class="feature-text">Selective APRIL neutralization; does NOT affect BAFF. Reduces total IgA and pathogenic Gd-IgA1. First and only anti-APRIL mAb approved. SC q4wk self-injection.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/41211929/" target="_blank" rel="noopener">IgA nephropathy</a> (FDA-approved 2025)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/41211929/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- BION-1301 -->
+<tr>
+<td class="agent-name">BION-1301</td>
+<td>APRIL</td>
+<td>Humanized IgG4 mAb</td>
+<td class="feature-text">Anti-APRIL mAb in development.</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT03945318" target="_blank" rel="noopener">IgA nephropathy</a></td>
+<td><span class="tag tag-phase1"><a href="https://clinicaltrials.gov/study/NCT03945318" target="_blank" rel="noopener">Phase 1/2</a></span></td>
+</tr>
+
+</tbody></table></div>
+
+<!-- Dual BAFF/APRIL sub -->
+<div class="subsection"><h3>Dual BAFF/APRIL Inhibitors <span class="target-badge" style="background:rgba(45,212,191,0.15);color:var(--teal);">TACI-Fc Fusions</span></h3></div>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type</th><th>Unique Features</th><th>Diseases</th><th>Status</th></tr></thead><tbody>
+
+<!-- Atacicept -->
+<tr>
+<td class="agent-name">Atacicept</td>
+<td>BAFF + APRIL</td>
+<td>WT TACI-Fc (aa 30–110)</td>
+<td class="feature-text">Neutralizes both BAFF and APRIL but suboptimal APRIL affinity. Primary endpoint failure in SLE. Safety concerns in LN trials (deaths led to early termination).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/29073347/" target="_blank" rel="noopener">SLE</a> (failed Phase 2/3)</td>
+<td><span class="tag tag-discontinued"><a href="https://pubmed.ncbi.nlm.nih.gov/29073347/" target="_blank" rel="noopener">Discontinued</a></span></td>
+</tr>
+
+<!-- Telitacicept -->
+<tr>
+<td class="agent-name">Telitacicept (RC18)</td>
+<td>BAFF + APRIL</td>
+<td>Modified TACI-Fc (aa 13–118)</td>
+<td class="feature-text">Dual BAFF/APRIL blockade. Affects mature/transitional B cells and plasma cells via APRIL inhibition. Approved in China for three indications. SC weekly.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/41092329/" target="_blank" rel="noopener">SLE</a>, <a href="https://clinicaltrials.gov/study/NCT03016013" target="_blank" rel="noopener">RA</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38726639/" target="_blank" rel="noopener">gMG</a> (approved China). Global Phase 3: SLE, LN, <a href="https://pubmed.ncbi.nlm.nih.gov/36938094/" target="_blank" rel="noopener">IgAN</a></td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/41092329/" target="_blank" rel="noopener">Approved (CN)</a></span> <span class="tag tag-phase3"><a href="https://pubmed.ncbi.nlm.nih.gov/41092329/" target="_blank" rel="noopener">Phase 3 (global)</a></span></td>
+</tr>
+
+<!-- Povetacicept -->
+<tr>
+<td class="agent-name">Povetacicept (ALPN-303)</td>
+<td>BAFF + APRIL</td>
+<td>Engineered TACI-Fc (directed evolution)</td>
+<td class="feature-text">Dramatically improved binding affinity for both APRIL and BAFF vs WT TACI-Fc. Addresses weak APRIL inhibition of atacicept/telitacicept. Vertex acquisition ($4.9B, 2024).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/36705554/" target="_blank" rel="noopener">SLE</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/41541780/" target="_blank" rel="noopener">IgAN</a></td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/39494621/" target="_blank" rel="noopener">Phase 1/2</a></span></td>
+</tr>
+
+</tbody></table></div>
+
+<!-- Other BAFF -->
+<div class="subsection"><h3>Other BAFF-Related</h3></div>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type</th><th>Unique Features</th><th>Diseases</th><th>Status</th></tr></thead><tbody>
+
+<!-- Rozibafusp -->
+<tr>
+<td class="agent-name">Rozibafusp alfa</td>
+<td>BAFF + ICOSL</td>
+<td>Bispecific IgG2-peptide fusion</td>
+<td class="feature-text">Dual inhibition of BAFF and inducible T-cell costimulator ligand (ICOSL) — modulates both B and T cell compartments.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/35899378/" target="_blank" rel="noopener">RA</a> (Phase 1b+), <a href="https://clinicaltrials.gov/study/NCT04058028" target="_blank" rel="noopener">SLE</a> (Phase 2b terminated for futility)</td>
+<td><span class="tag tag-discontinued"><a href="https://clinicaltrials.gov/study/NCT04058028" target="_blank" rel="noopener">Discontinued (SLE)</a></span></td>
+</tr>
+
+</tbody></table></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- BISPECIFICS -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="bispecific">
+<div class="section-header"><div class="icon" style="background:rgba(249,146,60,0.15);color:var(--orange);">🔗</div><h2>Bispecific Antibodies / T-Cell Engagers</h2></div>
+<p class="section-desc">Redirect patient T cells to kill target B lineage cells by simultaneously binding CD3 on T cells and a B cell/plasma cell antigen. Developed for hematologic malignancies; now being repurposed for refractory autoimmune diseases.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Targets</th><th>Format</th><th>Unique Features</th><th>Diseases / Applications</th><th>Status</th></tr></thead><tbody>
+
+<!-- Blinatumomab -->
+<tr style="border-left:3px solid var(--cyan)">
+<td class="agent-name">Blinatumomab</td>
+<td>CD19 × CD3</td>
+<td>BiTE (scFv-scFv)</td>
+<td class="feature-text">First approved bispecific (2014). Short half-life → continuous IV infusion. Rapid B cell depletion via T cell redirection.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/28249141/" target="_blank" rel="noopener">B-ALL</a> (approved). Compassionate use: refractory <a href="https://www.nature.com/articles/s41591-026-04238-4" target="_blank" rel="noopener">ASyS (myositis/ILD)</a> with rapid improvement; <a href="https://www.nature.com/articles/s41591-026-04238-4" target="_blank" rel="noopener">SSc</a> (Nature Medicine 2026)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/28249141/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-offlabel"><a href="https://www.nature.com/articles/s41591-026-04238-4" target="_blank" rel="noopener">Compassionate (AI)</a></span></td>
+</tr>
+
+<!-- Epcoritamab -->
+<tr style="border-left:3px solid var(--accent)">
+<td class="agent-name">Epcoritamab</td>
+<td>CD20 × CD3</td>
+<td>IgG1 bispecific (SC)</td>
+<td class="feature-text">Subcutaneous administration — unique among CD20×CD3 TCEs.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/36548927/" target="_blank" rel="noopener">DLBCL</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38889737/" target="_blank" rel="noopener">FL</a> (approved). Not yet in autoimmune disease</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/36548927/" target="_blank" rel="noopener">Approved (onc)</a></span></td>
+</tr>
+
+<!-- Glofitamab -->
+<tr style="border-left:3px solid var(--accent)">
+<td class="agent-name">Glofitamab</td>
+<td>CD20 × CD3</td>
+<td>2:1 format (2× CD20, 1× CD3)</td>
+<td class="feature-text">Two CD20 binding arms for enhanced avidity. Given with obinutuzumab pre-treatment to reduce CRS.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/36507690/" target="_blank" rel="noopener">DLBCL</a> (approved). Not yet in autoimmune disease</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/36507690/" target="_blank" rel="noopener">Approved (onc)</a></span></td>
+</tr>
+
+<!-- Mosunetuzumab -->
+<tr style="border-left:3px solid var(--accent)">
+<td class="agent-name">Mosunetuzumab</td>
+<td>CD20 × CD3</td>
+<td>IgG1 bispecific</td>
+<td class="feature-text">Outpatient-friendly (lower CRS risk). Available SC and IV.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/35803286/" target="_blank" rel="noopener">FL</a> (approved). Not yet in autoimmune disease</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/35803286/" target="_blank" rel="noopener">Approved (onc)</a></span></td>
+</tr>
+
+<!-- Odronextamab -->
+<tr style="border-left:3px solid var(--accent)">
+<td class="agent-name">Odronextamab</td>
+<td>CD20 × CD3</td>
+<td>IgG4 bispecific</td>
+<td class="feature-text">IgG4 subtype (vs IgG1 for others).</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/40097657/" target="_blank" rel="noopener">DLBCL</a> (EMA-approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/40097657/" target="_blank" rel="noopener">Approved (EU)</a></span></td>
+</tr>
+
+<!-- Teclistamab -->
+<tr style="border-left:3px solid var(--purple)">
+<td class="agent-name">Teclistamab</td>
+<td>BCMA × CD3</td>
+<td>IgG4 DuoBody</td>
+<td class="feature-text">Targets BCMA on plasma cells. Depletes long-lived PCs that escape anti-CD20 therapy. Reduces autoantibodies from PCs. Key agent for autoimmune repurposing.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/35661166/" target="_blank" rel="noopener">MM</a> (approved). Compassionate: refractory <a href="https://pubmed.ncbi.nlm.nih.gov/39231352/" target="_blank" rel="noopener">SLE</a> (NEJM 2024), <a href="https://www.nature.com/articles/s41591-026-04238-4" target="_blank" rel="noopener">SSc</a> with skin fibrosis improvement + ILD stabilization (Nat Med 2026)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/35661166/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-offlabel"><a href="https://pubmed.ncbi.nlm.nih.gov/39231352/" target="_blank" rel="noopener">Compassionate (AI)</a></span></td>
+</tr>
+
+<!-- Elranatamab -->
+<tr style="border-left:3px solid var(--purple)">
+<td class="agent-name">Elranatamab</td>
+<td>BCMA × CD3</td>
+<td>Bispecific mAb (SC)</td>
+<td class="feature-text">BCMA-targeting TCE. SC administration.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/37582952/" target="_blank" rel="noopener">MM</a> (approved). Not yet in autoimmune disease</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/37582952/" target="_blank" rel="noopener">Approved (onc)</a></span></td>
+</tr>
+
+<!-- Talquetamab -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">Talquetamab</td>
+<td>GPRC5D × CD3</td>
+<td>IgG4 DuoBody</td>
+<td class="feature-text">Targets GPRC5D on PCs (and keratinized tissues → skin/nail toxicity). Alternative PC target to BCMA.</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/36507686/" target="_blank" rel="noopener">MM</a> (approved). Not yet in autoimmune disease</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/36507686/" target="_blank" rel="noopener">Approved (onc)</a></span></td>
+</tr>
+
+<!-- Linvoseltamab -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">Linvoseltamab</td>
+<td>BCMA × CD3</td>
+<td>Bispecific mAb</td>
+<td class="feature-text">BCMA-targeting TCE in development. FDA CRL for MM (2024).</td>
+<td class="disease-list">R/R <a href="https://pubmed.ncbi.nlm.nih.gov/38879802/" target="_blank" rel="noopener">MM</a></td>
+<td><span class="tag tag-phase3"><a href="https://pubmed.ncbi.nlm.nih.gov/38879802/" target="_blank" rel="noopener">Phase 3</a></span></td>
+</tr>
+
+<!-- JNJ-7965322 -->
+<tr style="border-left:3px solid var(--rose)">
+<td class="agent-name">JNJ-7965322</td>
+<td>BCMA × GPRC5D × CD3</td>
+<td><strong>Trispecific</strong></td>
+<td class="feature-text">Combines teclistamab + talquetamab targets in one molecule. May prevent antigen escape. Early data suggest reduced toxicity vs dual agents.</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT05652335" target="_blank" rel="noopener">MM</a> (preclinical/Phase 1)</td>
+<td><span class="tag tag-phase1"><a href="https://clinicaltrials.gov/study/NCT05652335" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- CAR-T -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="cart">
+<div class="section-header"><div class="icon" style="background:rgba(251,113,133,0.15);color:var(--rose);">🧬</div><h2>CAR-T Cell Therapies</h2></div>
+<p class="section-desc">T cells engineered with chimeric antigen receptors targeting B lineage antigens. Originally developed for B cell malignancies, now achieving drug-free remission ("immune reset") in refractory autoimmune diseases after a single infusion.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent / Approach</th><th>Target(s)</th><th>Type</th><th>Unique Features</th><th>Diseases / Applications</th><th>Status</th></tr></thead><tbody>
+
+<!-- Erlangen CD19 CAR-T -->
+<tr style="border-left:3px solid var(--cyan)">
+<td class="agent-name">Autologous CD19 CAR-T<br><small style="color:var(--text-dim)">(Erlangen protocol)</small></td>
+<td>CD19</td>
+<td>Autologous</td>
+<td class="feature-text">Pioneering work (Schett/Mackensen). Single infusion → drug-free remission. B cell reconstitution predominantly naïve, non-autoreactive = "immune reset". NEJM 2024 case series (15 patients).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38381673/" target="_blank" rel="noopener">SLE</a> (DORIS remission), <a href="https://pubmed.ncbi.nlm.nih.gov/38381673/" target="_blank" rel="noopener">SSc</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38381673/" target="_blank" rel="noopener">IIM</a>, RA</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/38381673/" target="_blank" rel="noopener">Phase 1/2</a></span></td>
+</tr>
+
+<!-- KYV-101 -->
+<tr style="border-left:3px solid var(--cyan)">
+<td class="agent-name">KYV-101 (Kyverna)</td>
+<td>CD19</td>
+<td>Autologous (fully human)</td>
+<td class="feature-text">Fully human CD19 CAR-T. First efficacy evidence in progressive MS (2024). CSF penetration confirmed.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/40193766/" target="_blank" rel="noopener">Progressive MS</a>, <a href="https://clinicaltrials.gov/study/NCT06193889" target="_blank" rel="noopener">lupus nephritis</a></td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/40193766/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- Relmacabtagene -->
+<tr style="border-left:3px solid var(--cyan)">
+<td class="agent-name">Relmacabtagene autoleucel</td>
+<td>CD19</td>
+<td>Autologous</td>
+<td class="feature-text">CD19 CAR-T. Phase 1 open-label in SLE (EClinicalMedicine 2025).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/40386685/" target="_blank" rel="noopener">SLE</a></td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/40386685/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- CTA311 -->
+<tr style="border-left:3px solid var(--cyan)">
+<td class="agent-name">CTA311</td>
+<td>CD19</td>
+<td>Autologous</td>
+<td class="feature-text">Presented at ACR 2025 across multiple autoimmune conditions.</td>
+<td class="disease-list"><a href="https://acrabstracts.org/abstract/preliminary-safety-efficacy-and-cellular-kinetics-of-cta311-a-cd19-targeted-universal-car-t-therapy-for-active-autoimmune-diseases/" target="_blank" rel="noopener">Multiple autoimmune diseases</a></td>
+<td><span class="tag tag-phase1"><a href="https://acrabstracts.org/abstract/preliminary-safety-efficacy-and-cellular-kinetics-of-cta311-a-cd19-targeted-universal-car-t-therapy-for-active-autoimmune-diseases/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- In vivo CD19 CAR-T -->
+<tr style="border-left:3px solid var(--green)">
+<td class="agent-name">In vivo CD19 CAR-T<br><small style="color:var(--text-dim)">(mRNA LNP)</small></td>
+<td>CD19</td>
+<td>In vivo generation</td>
+<td class="feature-text">LNP-delivered mRNA encoding CD19 CAR directly to patient T cells in vivo. No leukapheresis, no lymphodepletion, no manufacturing delay. Potentially paradigm-shifting for access and cost.</td>
+<td class="disease-list">Refractory <a href="https://pubmed.ncbi.nlm.nih.gov/40961420/" target="_blank" rel="noopener">SLE</a> (NEJM 2025 case report). Also: <a href="https://pubmed.ncbi.nlm.nih.gov/40536974/" target="_blank" rel="noopener">Hunter et al., Science 2025</a></td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/40961420/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- CT103A -->
+<tr style="border-left:3px solid var(--purple)">
+<td class="agent-name">CT103A</td>
+<td>BCMA</td>
+<td>Autologous</td>
+<td class="feature-text">BCMA CAR-T directly targeting plasma cells.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38289960/" target="_blank" rel="noopener">Anti-SRP necrotizing myopathy</a> (PNAS 2024), <a href="https://pubmed.ncbi.nlm.nih.gov/36604411/" target="_blank" rel="noopener">AQP4+ NMOSD</a></td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/38289960/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- Descartes-08 -->
+<tr style="border-left:3px solid var(--purple)">
+<td class="agent-name">Descartes-08</td>
+<td>BCMA</td>
+<td>RNA-based (transient)</td>
+<td class="feature-text">Non-integrating mRNA CAR → transient expression. Potentially safer (no insertional oncogenesis risk) but less durable.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/37353278/" target="_blank" rel="noopener">Myasthenia gravis</a> (MG-001 trial)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/37353278/" target="_blank" rel="noopener">Phase 1b/2a</a></span></td>
+</tr>
+
+<!-- BCMA-CD19 cCAR -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">BCMA-CD19 cCAR</td>
+<td>CD19 + BCMA</td>
+<td>Compound CAR (autologous)</td>
+<td class="feature-text">Dual-targeting: CD19 (B cells) + BCMA (PCs). Includes IL-15/IL-15Rα sushi domain for T cell persistence. "Complete humoral reset" — eliminates autoantibodies from long-lived PCs (e.g., anti-SSA/Ro) that persist after CD19-only CAR-T.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38777376/" target="_blank" rel="noopener">SLE, lupus nephritis</a> (Ann Rheum Dis 2024)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/38777376/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- CTA313 -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">CTA313</td>
+<td>CD19 + BCMA</td>
+<td>Dual CAR-T (autologous)</td>
+<td class="feature-text">Dual CD19/BCMA CAR-T. ACR 2025 data in active SLE.</td>
+<td class="disease-list"><a href="https://acrabstracts.org/abstract/preliminary-safety-efficacy-and-cellular-kinetics-of-cta313-a-cd19-bcma-dual-targeted-universal-car-t-therapy-for-active-systemic-lupus-erythematosus/" target="_blank" rel="noopener">SLE</a></td>
+<td><span class="tag tag-phase1"><a href="https://acrabstracts.org/abstract/preliminary-safety-efficacy-and-cellular-kinetics-of-cta313-a-cd19-bcma-dual-targeted-universal-car-t-therapy-for-active-systemic-lupus-erythematosus/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- Bispecific BCMA/CD19 CAR-T -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">Bispecific BCMA/CD19 CAR-T</td>
+<td>CD19 + BCMA</td>
+<td>Single bispecific construct</td>
+<td class="feature-text">Single CAR construct targeting both antigens. First trial in refractory gMG (2025): safe, no DLTs, significant clinical improvement.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/38602546/" target="_blank" rel="noopener">gMG</a>, <a href="https://clinicaltrials.gov/study/NCT06485232" target="_blank" rel="noopener">CIDP, MS, NMOSD</a> (trials ongoing)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/38602546/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- Zamtocabtagene -->
+<tr style="border-left:3px solid var(--amber)">
+<td class="agent-name">Zamtocabtagene autoleucel</td>
+<td>CD20 + CD19</td>
+<td>Tandem, non-cryopreserved</td>
+<td class="feature-text">Tandem CD20-CD19 targeting. Non-cryopreserved product. Sustained drug-free RA remission case report.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/39448205/" target="_blank" rel="noopener">RA</a> (case report, RMD Open 2024)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/39448205/" target="_blank" rel="noopener">Early clinical</a></span></td>
+</tr>
+
+<!-- BAFF ligand CAR-T -->
+<tr style="border-left:3px solid var(--teal)">
+<td class="agent-name">BAFF ligand CAR-T</td>
+<td>BAFF-R, TACI, BCMA</td>
+<td>Autologous</td>
+<td class="feature-text">Uses BAFF as the CAR extracellular domain → targets all cells expressing any BAFF receptor. Broad B cell + PC coverage. Outperformed CD19 CAR-T in preclinical lupus models.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/39832454/" target="_blank" rel="noopener">SLE</a> (preclinical)</td>
+<td><span class="tag tag-preclinical"><a href="https://pubmed.ncbi.nlm.nih.gov/39832454/" target="_blank" rel="noopener">Preclinical</a></span></td>
+</tr>
+
+<!-- CAAR-T -->
+<tr style="border-left:3px solid var(--teal)">
+<td class="agent-name">CAAR-T<br><small style="color:var(--text-dim)">(chimeric autoantibody receptor)</small></td>
+<td>Autoantigen-specific B cells</td>
+<td>Autologous</td>
+<td class="feature-text">Expresses the autoantigen (e.g., Dsg3 in pemphigus) on the T cell surface → selectively kills only B cells bearing the pathogenic BCR. Spares all non-autoreactive B cells. Highly targeted.</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT04422912" target="_blank" rel="noopener">Pemphigus vulgaris</a> (Phase 1). Investigated: lupus nephritis (CATCR approach)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/27365313/" target="_blank" rel="noopener">Phase 1</a></span></td>
+</tr>
+
+<!-- iPSC CAR-NK -->
+<tr style="border-left:3px solid var(--teal)">
+<td class="agent-name">iPSC-derived CAR-NK</td>
+<td>CD19 / BCMA</td>
+<td>Allogeneic, off-the-shelf</td>
+<td class="feature-text">iPSC-derived NK cells with dual CD19/BCMA CAR. Off-the-shelf (no patient leukapheresis needed). Case report in SSc (Cell 2025).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/40562027/" target="_blank" rel="noopener">SSc</a> (case report)</td>
+<td><span class="tag tag-phase1"><a href="https://pubmed.ncbi.nlm.nih.gov/40562027/" target="_blank" rel="noopener">Early clinical</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- OTHER -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="other">
+<div class="section-header"><div class="icon" style="background:rgba(45,212,191,0.15);color:var(--teal);">⚙️</div><h2>Other B Cell–Relevant Therapies</h2></div>
+<p class="section-desc">Small molecules and biologics that modulate B cell function, target plasma cells, or address the downstream products of B cell activity without direct cell-surface targeting.</p>
+<div class="table-wrap"><table><thead><tr><th>Agent</th><th>Target</th><th>Type</th><th>Unique Features</th><th>Diseases</th><th>Status</th></tr></thead><tbody>
+
+<tr><td colspan="6" class="section-divider">BTK Inhibitors — Functional B Cell Modulation (no depletion)</td></tr>
+
+<!-- Fenebrutinib -->
+<tr>
+<td class="agent-name">Fenebrutinib</td>
+<td>BTK (irreversible)</td>
+<td>Oral small molecule</td>
+<td class="feature-text">Inhibits BCR signaling → reduces B cell activation, proliferation, antigen presentation, cytokine secretion. Also affects myeloid cells via BTK. Does not deplete B cells.</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT04586023" target="_blank" rel="noopener">MS</a> (Phase 3), <a href="https://pubmed.ncbi.nlm.nih.gov/32270926/" target="_blank" rel="noopener">RA</a>, <a href="https://clinicaltrials.gov/study/NCT02908100" target="_blank" rel="noopener">SLE</a> (Phase 2)</td>
+<td><span class="tag tag-phase3"><a href="https://clinicaltrials.gov/study/NCT04586023" target="_blank" rel="noopener">Phase 2/3</a></span></td>
+</tr>
+
+<!-- Evobrutinib -->
+<tr>
+<td class="agent-name">Evobrutinib</td>
+<td>BTK</td>
+<td>Oral small molecule</td>
+<td class="feature-text">CNS-penetrant BTK inhibitor.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/39307151/" target="_blank" rel="noopener">MS</a> (Phase 3)</td>
+<td><span class="tag tag-phase3"><a href="https://pubmed.ncbi.nlm.nih.gov/39307151/" target="_blank" rel="noopener">Phase 3</a></span></td>
+</tr>
+
+<!-- Rilzabrutinib -->
+<tr>
+<td class="agent-name">Rilzabrutinib</td>
+<td>BTK (reversible/covalent)</td>
+<td>Oral small molecule</td>
+<td class="feature-text">Reversible covalent BTK inhibitor — may have improved safety over irreversible BTKi.</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT04520451" target="_blank" rel="noopener">IgG4-RD</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/33942286/" target="_blank" rel="noopener">pemphigus</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/40090011/" target="_blank" rel="noopener">ITP</a></td>
+<td><span class="tag tag-phase2"><a href="https://pubmed.ncbi.nlm.nih.gov/40090011/" target="_blank" rel="noopener">Phase 2/3</a></span></td>
+</tr>
+
+<!-- Remibrutinib -->
+<tr>
+<td class="agent-name">Remibrutinib</td>
+<td>BTK (selective)</td>
+<td>Oral small molecule</td>
+<td class="feature-text">Highly selective BTK inhibitor.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/40043237/" target="_blank" rel="noopener">CSU</a>, Sjögren's</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/40043237/" target="_blank" rel="noopener">Approved (CSU)</a></span></td>
+</tr>
+
+<tr><td colspan="6" class="section-divider">Proteasome Inhibitors — Plasma Cell Apoptosis</td></tr>
+
+<!-- Bortezomib -->
+<tr>
+<td class="agent-name">Bortezomib</td>
+<td>26S proteasome</td>
+<td>IV/SC small molecule</td>
+<td class="feature-text">Induces apoptosis in plasma cells (high protein synthesis / UPR dependency). Depletes short-lived and some long-lived PCs. Limited by neurotoxicity and hematotoxicity.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/18753647/" target="_blank" rel="noopener">MM</a> (approved). Off-label: <a href="https://pubmed.ncbi.nlm.nih.gov/25710470/" target="_blank" rel="noopener">refractory SLE</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/26923204/" target="_blank" rel="noopener">LN</a>, TTP, AMR</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/18753647/" target="_blank" rel="noopener">Approved (onc)</a></span> <span class="tag tag-offlabel"><a href="https://pubmed.ncbi.nlm.nih.gov/25710470/" target="_blank" rel="noopener">Off-label (AI)</a></span></td>
+</tr>
+
+<tr><td colspan="6" class="section-divider">FcRn Inhibitors — Accelerated IgG Catabolism</td></tr>
+
+<!-- Efgartigimod -->
+<tr>
+<td class="agent-name">Efgartigimod</td>
+<td>FcRn</td>
+<td>Human IgG1 Fc fragment</td>
+<td class="feature-text">Blocks neonatal Fc receptor → accelerates IgG degradation → rapid reduction in total and pathogenic IgG. Does NOT deplete B cells — removes their antibody products. Now approved for gMG and CIDP. ALKIVIA Phase 2/3 met primary endpoint in IIM (TIS 50.45 vs 35.65, P=0.0004).</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/34146511/" target="_blank" rel="noopener">gMG</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39304241/" target="_blank" rel="noopener">CIDP</a> (approved). Investigated: <a href="https://pubmed.ncbi.nlm.nih.gov/37778358/" target="_blank" rel="noopener">ITP</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/34608631/" target="_blank" rel="noopener">pemphigus</a>, <a href="https://clinicaltrials.gov/study/NCT05523167" target="_blank" rel="noopener">IIM/myositis</a> (ALKIVIA Phase 2/3 — primary endpoint met), <a href="https://argenx.com/news/2024/argenx-presents-new-efgartigimod-data-at-eular-2025-highlighting" target="_blank" rel="noopener">Sjögren's</a> (Phase 2)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/34146511/" target="_blank" rel="noopener">Approved</a></span> <span class="tag tag-phase2"><a href="https://clinicaltrials.gov/study/NCT05523167" target="_blank" rel="noopener">Phase 2/3 (IIM)</a></span></td>
+</tr>
+
+<!-- Rozanolixizumab -->
+<tr>
+<td class="agent-name">Rozanolixizumab</td>
+<td>FcRn</td>
+<td>Humanized IgG4 mAb</td>
+<td class="feature-text">Anti-FcRn mAb. SC injection.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/37059507/" target="_blank" rel="noopener">gMG</a> (approved)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/37059507/" target="_blank" rel="noopener">Approved</a></span></td>
+</tr>
+
+<!-- Nipocalimab -->
+<tr>
+<td class="agent-name">Nipocalimab</td>
+<td>FcRn</td>
+<td>Human IgG1 mAb (effector-null)</td>
+<td class="feature-text">Anti-FcRn mAb. Effector-null IgG1. Minimal transplacental transfer → safest FcRn option in pregnancy. Continuous q2wk dosing = "longest sustained disease control" among FcRn class. JASMINE Phase 2 in SLE met primary endpoint (2026). Also investigated for maternal-fetal indications.</td>
+<td class="disease-list"><a href="https://pubmed.ncbi.nlm.nih.gov/39862879/" target="_blank" rel="noopener">gMG</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/41284548/" target="_blank" rel="noopener">Sjögren's</a>, <a href="https://clinicaltrials.gov/study/NCT04119050" target="_blank" rel="noopener">warm AIHA</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39115062/" target="_blank" rel="noopener">HDFN</a>, <a href="https://clinicaltrials.gov/study/NCT04882878" target="_blank" rel="noopener">SLE</a> (JASMINE Phase 2 — met primary endpoint)</td>
+<td><span class="tag tag-approved"><a href="https://pubmed.ncbi.nlm.nih.gov/39862879/" target="_blank" rel="noopener">Approved (gMG)</a></span></td>
+</tr>
+
+<!-- IMVT-1402 -->
+<tr>
+<td class="agent-name">IMVT-1402</td>
+<td>FcRn</td>
+<td>Fully human IgG1 mAb (2nd gen)</td>
+<td class="feature-text">Next-generation FcRn inhibitor. Designed to achieve deeper IgG reduction (~74%) than 1st-gen agents while avoiding albumin/LDL effects (batoclimab liability). SC self-injection. Registrational programs in 5+ indications. Immunovant lead asset (batoclimab deprioritized despite positive Phase 3).</td>
+<td class="disease-list"><a href="https://clinicaltrials.gov/study/NCT05403541" target="_blank" rel="noopener">gMG</a>, <a href="https://clinicaltrials.gov/study/NCT06722235" target="_blank" rel="noopener">CIDP</a>, <a href="https://www.immunovant.com/investors/news-events/press-releases/detail/75/immunovant-unveils-durability-and-treatment-free-six-month" target="_blank" rel="noopener">Graves' disease</a> (Phase 3), <a href="https://clinicaltrials.gov/study/NCT04882878" target="_blank" rel="noopener">D2T RA</a>, Sjögren's</td>
+<td><span class="tag tag-phase3"><a href="https://www.immunovant.com/investors/news-events/press-releases/detail/75/immunovant-unveils-durability-and-treatment-free-six-month" target="_blank" rel="noopener">Phase 2/3</a></span></td>
+</tr>
+
+</tbody></table></div></div>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- LINEAGE TABLE -->
+<!-- ═══════════════════════════════════════════════ -->
+<div class="section" id="lineage">
+<div class="section-header"><div class="icon" style="background:rgba(251,191,36,0.15);color:var(--amber);">🔬</div><h2>B Cell Lineage Coverage by Target Antigen</h2></div>
+<p class="section-desc">Expression levels and therapeutic relevance of each target across the B cell differentiation spectrum. Understanding these lineage gaps explains why CD20-only approaches fail in plasma cell–driven diseases.</p>
+<div class="table-wrap"><table class="lineage-table"><thead><tr>
+<th style="text-align:left">Target</th><th>Pro-B</th><th>Pre-B</th><th>Immature B</th><th>Mature /<br>Memory B</th><th>Plasma-<br>blast</th><th>Plasma<br>Cell</th>
+</tr></thead><tbody>
+<tr><td>CD20</td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td></tr>
+<tr><td>CD19</td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td><td><span class="expr-mod">++</span></td><td><span class="expr-min">+/−</span></td></tr>
+<tr><td>CD38</td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-min">+/−</span></td><td><span class="expr-mod">++</span></td><td><span class="expr-high">+++</span></td></tr>
+<tr><td>CD138 <small style="color:var(--text-dim)">(syndecan-1)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-high">+++</span></td></tr>
+<tr><td>BCMA <small style="color:var(--text-dim)">(TNFRSF17)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td></tr>
+<tr><td>GPRC5D</td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td></tr>
+<tr><td>BAFF-R <small style="color:var(--text-dim)">(BR3)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td><td><span class="expr-low">+</span></td><td><span class="expr-none">−</span></td></tr>
+<tr><td>BAFF <small style="color:var(--text-dim)">(soluble ligand)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-mod">++</span></td><td><span class="expr-low">+</span></td><td><span class="expr-none">−</span></td></tr>
+<tr><td>APRIL <small style="color:var(--text-dim)">(soluble ligand)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-mod">++</span></td><td><span class="expr-high">+++</span></td></tr>
+<tr><td>BTK <small style="color:var(--text-dim)">(intracellular)</small></td><td><span class="expr-none">−</span></td><td><span class="expr-low">+</span></td><td><span class="expr-low">+</span></td><td><span class="expr-high">+++</span></td><td><span class="expr-none">−</span></td><td><span class="expr-none">−</span></td></tr>
+</tbody></table></div>
+<div class="legend">
+<div class="legend-item"><span class="expr-high">+++</span>&nbsp; High expression / relevance</div>
+<div class="legend-item"><span class="expr-mod">++</span>&nbsp; Moderate</div>
+<div class="legend-item"><span class="expr-low">+</span>&nbsp; Low</div>
+<div class="legend-item"><span class="expr-min">+/−</span>&nbsp; Minimal / variable</div>
+<div class="legend-item"><span class="expr-none">−</span>&nbsp; Absent</div>
+</div>
+<div class="legend" style="margin-top:1.5rem;gap:.75rem">
+<span style="font-weight:600">Status tags:</span>
+<div class="legend-item"><span class="tag tag-approved">Approved</span></div>
+<div class="legend-item"><span class="tag tag-phase3">Phase 3</span></div>
+<div class="legend-item"><span class="tag tag-phase2">Phase 2</span></div>
+<div class="legend-item"><span class="tag tag-phase1">Phase 1</span></div>
+<div class="legend-item"><span class="tag tag-offlabel">Off-label</span></div>
+<div class="legend-item"><span class="tag tag-preclinical">Preclinical</span></div>
+<div class="legend-item"><span class="tag tag-discontinued">Discontinued</span></div>
+</div>
+</div>
+
+</div>
+<div class="footer">
+<p>Created by Marwin Groener, MD with the help of Claude Opus 4.6 by Anthropic. Data compiled from Lancet Rheumatology 2025, Nat Rev Rheumatol 2025, Nat Rev Drug Discov 2026, NEJM 2024–2025, Nature Medicine 2024–2026, Frontiers in Immunology 2024–2025, Ann Rheum Dis 2024, and additional peer-reviewed sources. For educational and clinical reference purposes. March 2026.</p>
+</div>
+</body>
+</html>
